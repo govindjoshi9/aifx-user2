@@ -80,11 +80,11 @@ const ActiveCard = ({ isLoading, title }) => {
                     <Typography
                       variant="subtitle2"
                       sx={{
-                        color: theme.palette.grey[200],
+                        color: theme.palette.grey[50],
                         mt: 0.5
                       }}
                     >
-                      {title}
+                      {title} Active Card
                     </Typography>
                   }
                 />

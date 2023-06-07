@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // material-ui
-import { styled, useTheme } from '@mui/material/styles';
+import { useTheme, styled } from '@mui/material/styles';
 import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
 
 // project imports
@@ -9,12 +9,10 @@ import MainCard from 'ui-component/cards/MainCard';
 import TotalIncomeCard from 'ui-component/cards/Skeleton/TotalIncomeCard';
 
 // assets
-import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
+import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
 
 // styles
-const CardWrapper = styled(MainCard)(({ theme }) => ({
-  backgroundColor: theme.palette.success.dark,
-  color: theme.palette.primary.light,
+const CardWrapper = styled(MainCard)(() => ({
   overflow: 'hidden',
   position: 'relative',
   '&:after': {
@@ -22,7 +20,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     position: 'absolute',
     width: 210,
     height: 210,
-    background: `linear-gradient(210.04deg, ${theme.palette.success.light} -50.94%, rgba(144, 202, 249, 0) 83.49%)`,
+    background: `linear-gradient(90deg, rgba(141,255,151,1) 0%, rgba(34,201,48,1) 48%, rgba(189,255,205,1) 88%)`,
     borderRadius: '50%',
     top: -30,
     right: -180
@@ -32,16 +30,16 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
     position: 'absolute',
     width: 210,
     height: 210,
-    background: `linear-gradient(140.9deg, ${theme.palette.success.light} -14.02%, rgba(144, 202, 249, 0) 77.58%)`,
+    background: `linear-gradient(90deg, rgba(141,255,151,1) 0%, rgba(34,201,48,1) 48%, rgba(189,255,205,1) 88%)`,
     borderRadius: '50%',
     top: -160,
     right: -130
   }
 }));
 
-// ==============================|| DASHBOARD - TOTAL INCOME DARK CARD ||============================== //
+// ==============================|| DASHBOARD - TOTAL INCOME LIGHT CARD ||============================== //
 
-const TotalStaking = ({ isLoading, title }) => {
+const TotalIncomeG = ({ isLoading }) => {
   const theme = useTheme();
 
   return (
@@ -59,11 +57,11 @@ const TotalStaking = ({ isLoading, title }) => {
                     sx={{
                       ...theme.typography.commonAvatar,
                       ...theme.typography.largeAvatar,
-                      backgroundColor: theme.palette.success.main,
-                      color: '#374359'
+                      backgroundColor: theme.palette.warning.light,
+                      color: theme.palette.warning.dark
                     }}
                   >
-                    <TableChartOutlinedIcon fontSize="inherit" />
+                    <StorefrontTwoToneIcon fontSize="inherit" />
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
@@ -72,14 +70,16 @@ const TotalStaking = ({ isLoading, title }) => {
                     mt: 0.45,
                     mb: 0.45
                   }}
-                  primary={
-                    <Typography variant="h4" sx={{ color: '#374359' }}>
-                      $203k
-                    </Typography>
-                  }
+                  primary={<Typography variant="h4">$203k</Typography>}
                   secondary={
-                    <Typography variant="subtitle2" sx={{ color: '#374359', mt: 0.25 }}>
-                      {title}
+                    <Typography
+                      variant="subtitle2"
+                      sx={{
+                        color: theme.palette.grey[500],
+                        mt: 0.5
+                      }}
+                    >
+                      Total Income
                     </Typography>
                   }
                 />
@@ -92,9 +92,8 @@ const TotalStaking = ({ isLoading, title }) => {
   );
 };
 
-TotalStaking.propTypes = {
-  isLoading: PropTypes.bool,
-  title: PropTypes.string
+TotalIncomeG.propTypes = {
+  isLoading: PropTypes.bool
 };
 
-export default TotalStaking;
+export default TotalIncomeG;

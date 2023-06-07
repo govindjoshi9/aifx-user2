@@ -145,7 +145,7 @@ const TotalOrderLineChartCard = ({ isLoading }) => {
                           sx={{
                             fontSize: '1rem',
                             fontWeight: 500,
-                            color: theme.palette.primary[200]
+                            color: theme.palette.grey[50]
                           }}
                         >
                           Total Order
