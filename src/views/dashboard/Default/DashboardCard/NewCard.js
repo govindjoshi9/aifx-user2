@@ -13,7 +13,7 @@ import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 
 // styles
 const CardWrapper = styled(MainCard)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.dark,
+  backgroundColor: theme.palette.secondary[800],
   color: theme.palette.primary.light,
   overflow: 'hidden',
   position: 'relative',
@@ -41,7 +41,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 
 // ==============================|| DASHBOARD - TOTAL INCOME DARK CARD ||============================== //
 
-const TotalIncomeDarkCard = ({ isLoading }) => {
+const NewCard = ({ isLoading }) => {
   const theme = useTheme();
 
   return (
@@ -92,8 +92,8 @@ const TotalIncomeDarkCard = ({ isLoading }) => {
   );
 };
 
-TotalIncomeDarkCard.propTypes = {
+NewCard.propTypes = {
   isLoading: PropTypes.bool
 };
 
-export default TotalIncomeDarkCard;
+export default NewCard;

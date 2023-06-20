@@ -5,13 +5,15 @@ import { Grid } from '@mui/material';
 
 // project imports
 import EarningCard from './EarningCard';
-import PopularCard from './PopularCard';
 import TotalOrderLineChartCard from './TotalOrderLineChartCard';
 import TotalIncomeDarkCard from './TotalIncomeDarkCard';
 import TotalIncomeLightCard from './TotalIncomeLightCard';
-import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
-
+import ConfirmWithdraw from './DashboardCard/ConfirmWithdraw';
+import PendingCard from './DashboardCard/PendingCard';
+import TotalInvestment from './DashboardCard/TotalInvestment';
+import InactiveCard from './DashboardCard/InactiveCard';
+import NewCard from './DashboardCard/NewCard';
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
 const Dashboard = () => {
@@ -44,11 +46,40 @@ const Dashboard = () => {
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={gridSpacing}>
-          <Grid item xs={12} md={8}>
-            <TotalGrowthBarChart isLoading={isLoading} />
+          <Grid item xs={12} md={4}>
+            <ConfirmWithdraw isLoading={isLoading} />
           </Grid>
           <Grid item xs={12} md={4}>
-            <PopularCard isLoading={isLoading} />
+            <PendingCard isLoading={isLoading} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TotalIncomeDarkCard isLoading={isLoading} />
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <Grid container spacing={gridSpacing}>
+          <Grid item xs={12} md={4}>
+            <TotalIncomeLightCard isLoading={isLoading} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <NewCard isLoading={isLoading} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TotalIncomeLightCard isLoading={isLoading} />
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <Grid container spacing={gridSpacing}>
+          <Grid item xs={12} md={4}>
+            <TotalIncomeDarkCard isLoading={isLoading} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TotalInvestment isLoading={isLoading} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <InactiveCard isLoading={isLoading} />
           </Grid>
         </Grid>
       </Grid>

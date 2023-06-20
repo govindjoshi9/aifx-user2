@@ -59,7 +59,7 @@ const PendingCard = ({ isLoading, title }) => {
                     sx={{
                       ...theme.typography.commonAvatar,
                       ...theme.typography.largeAvatar,
-                      backgroundColor: theme.palette.warning.main,
+                      backgroundColor: theme.palette.warning.dark,
                       color: '#fff'
                     }}
                   >
@@ -73,7 +73,7 @@ const PendingCard = ({ isLoading, title }) => {
                     mb: 0.45
                   }}
                   primary={
-                    <Typography variant="h4" sx={{ color: '#374359' }}>
+                    <Typography variant="h4" sx={{ color: '#ffffff' }}>
                       $203k
                     </Typography>
                   }

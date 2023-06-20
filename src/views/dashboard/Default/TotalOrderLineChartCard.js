@@ -133,7 +133,7 @@ const TotalOrderLineChartCard = ({ isLoading }) => {
                           sx={{
                             ...theme.typography.smallAvatar,
                             cursor: 'pointer',
-                            backgroundColor: theme.palette.primary[200],
+                            backgroundColor: theme.palette.primary.light,
                             color: theme.palette.primary.dark
                           }}
                         >
@@ -145,7 +145,7 @@ const TotalOrderLineChartCard = ({ isLoading }) => {
                           sx={{
                             fontSize: '1rem',
                             fontWeight: 500,
-                            color: theme.palette.primary[200]
+                            color: theme.palette.primary.light
                           }}
                         >
                           Total Order
